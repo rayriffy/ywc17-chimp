@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"/EDR":function(n,e,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/",function(){return t("QeBL")}])},QeBL:function(n,e,t){"use strict";t.r(e);var u=t("q1tI"),o=t.n(u),w=o.a.createElement;e.default=function(n){return w(o.a.Fragment,null,"OK")}}},[["/EDR",1,0]]]);
