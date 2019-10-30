@@ -1,0 +1,59 @@
+name: Test, Build & Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: "Init: Summon NodeJS"
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: "Init: Install dependencies"
+      uses: borales/actions-yarn@master
+      with:
+        args: install
+    - name: "Test: Type checking"
+      uses: borales/actions-yarn@master
+      with:
+        args: test:types
+    - name: "Test: Code linting"
+      uses: borales/actions-yarn@master
+      with:
+        args: test:lint
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: "Init: Summon NodeJS"
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: "Init: Install dependencies"
+      uses: borales/actions-yarn@master
+      with:
+        args: install
+    - name: "Build: Build and deploy Next"
+      uses: borales/actions-yarn@master
+      with:
+        args: deploy
+    - name: "Deploy: Upload to GitHub Pages"
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./out

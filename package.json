@@ -1,0 +1,44 @@
+{
+  "name": "ywc17-chimp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rayriffy/ywc17-chimp",
+  "author": "Phumrapee Limpianchop <contact@rayriffy.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "image-trace-loader": "^0.1.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "next": "^9.1.2",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.5.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "rebass": "^4.0.7",
+    "responsive-loader": "^1.2.0",
+    "styled-components": "^4.4.0",
+    "webp-loader": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/rebass": "^4.0.3",
+    "@types/styled-components": "^4.1.20",
+    "prettier": "^1.18.2",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.6.4"
+  },
+  "scripts": {
+    "build": "next build",
+    "deploy": "yarn build && yarn export",
+    "dev": "next",
+    "export": "next export",
+    "format": "yarn test:lint --fix",
+    "start": "next start",
+    "test": "yarn test:lint && yarn test:types",
+    "test:lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "test:types": "tsc"
+  }
+}
