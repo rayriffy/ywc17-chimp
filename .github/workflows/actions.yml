@@ -18,18 +18,18 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: "Init: Install yarn"
+      run: |
+        curl -o- -L https://yarnpkg.com/install.sh | bash
     - name: "Init: Install dependencies"
-      uses: borales/actions-yarn@master
-      with:
-        args: install
+      run: |
+        yarn install
     - name: "Test: Type checking"
-      uses: borales/actions-yarn@master
-      with:
-        args: test:types
+      run: |
+        yarn test:types
     - name: "Test: Code linting"
-      uses: borales/actions-yarn@master
-      with:
-        args: test:lint
+      run: |
+        yarn test:lint
 
   deploy:
     needs: test
@@ -43,14 +43,15 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: "Init: Install yarn"
+      run: |
+        curl -o- -L https://yarnpkg.com/install.sh | bash
     - name: "Init: Install dependencies"
-      uses: borales/actions-yarn@master
-      with:
-        args: install
+      run: |
+        yarn install
     - name: "Build: Build and deploy Next"
-      uses: borales/actions-yarn@master
-      with:
-        args: deploy
+      run: |
+        yarn deploy
     - name: "Deploy: Upload to GitHub Pages"
       uses: peaceiris/actions-gh-pages@v2.5.0
       env:
