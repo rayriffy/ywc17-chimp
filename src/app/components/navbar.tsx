@@ -22,6 +22,8 @@ const NavText = styled(Text)`
   font-weight: bold;
   transition: all 0.3s ease-in-out 0s;
 
+  position: relative;
+
   &:hover {
     color: #213a8f;
 
@@ -37,7 +39,7 @@ const NavText = styled(Text)`
 
     position: absolute;
     left: 0;
-    bottom: 0px;
+    bottom: -10px;
 
     background-color: #213a8f;
 
