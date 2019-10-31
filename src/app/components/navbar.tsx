@@ -20,6 +20,30 @@ const NavLink = styled(Link)`
 const NavText = styled(Text)`
   color: #333333;
   font-weight: bold;
+  transition: all 0.3s ease-in-out 0s;
+
+  &:hover {
+    color: #213a8f;
+
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 6px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+
+    background-color: #213a8f;
+
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
 `
 
 const AppNavbarComponent: React.FC = () => {
