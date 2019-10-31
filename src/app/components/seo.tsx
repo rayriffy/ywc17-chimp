@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
+import { assetURL } from '../../core/services/assetURL'
+
 const SEOComponent: React.FC = props => {
   return (
     <Helmet
@@ -10,11 +12,11 @@ const SEOComponent: React.FC = props => {
       link={[
         {
           rel: 'shortcut icon',
-          href: '/static/images/logo.png',
+          href: `${assetURL}/static/images/logo.png`,
         },
         {
           rel: 'apple-touch-icon-precomposed',
-          href: '/static/images/logo.png',
+          href: `${assetURL}/static/images/logo.png`,
         },
       ]}
     />

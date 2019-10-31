@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const BACKEND_URL = process.env.NODE_ENV === 'production' ? '/ywc17-chimp' : ''
+import { assetURL } from '../../core/services/assetURL'
 
 const AppGlobalComponent = createGlobalStyle`
   body {
@@ -12,28 +12,28 @@ const AppGlobalComponent = createGlobalStyle`
     font-family: 'Chonburi';
     font-style: normal;
     font-display: swap;
-    src: url('${BACKEND_URL}/static/fonts/Chonburi/normal/font.woff2') format('woff2'), url('${BACKEND_URL}/static/fonts/Chonburi/normal/font.woff') format('woff');
+    src: url('${assetURL}/static/fonts/Chonburi/normal/font.woff2') format('woff2'), url('${assetURL}/static/fonts/Chonburi/normal/font.woff') format('woff');
   }
 
   @font-face {
     font-family: 'TATSanaChon';
     font-style: normal;
     font-display: swap;
-    src: url('${BACKEND_URL}/static/fonts/TATSanaChon/normal/font.woff2') format('woff2'), url('${BACKEND_URL}/static/fonts/TATSanaChon/normal/font.woff') format('woff');
+    src: url('${assetURL}/static/fonts/TATSanaChon/normal/font.woff2') format('woff2'), url('${assetURL}/static/fonts/TATSanaChon/normal/font.woff') format('woff');
   }
 
   @font-face {
     font-family: 'TATSanaChon';
     font-style: bold;
     font-display: swap;
-    src: url('${BACKEND_URL}/static/fonts/TATSanaChon/bold/font.woff2') format('woff2'), url('${BACKEND_URL}/static/fonts/TATSanaChon/bold/font.woff') format('woff');
+    src: url('${assetURL}/static/fonts/TATSanaChon/bold/font.woff2') format('woff2'), url('${assetURL}/static/fonts/TATSanaChon/bold/font.woff') format('woff');
   }
 
   @font-face {
     font-family: 'TATSanaSuksa';
     font-style: normal;
     font-display: swap;
-    src: url('${BACKEND_URL}/static/fonts/TATSanaSuksa/normal/font.woff2') format('woff2'), url('${BACKEND_URL}/static/fonts/TATSanaSuksa/normal/font.woff') format('woff');
+    src: url('${assetURL}/static/fonts/TATSanaSuksa/normal/font.woff2') format('woff2'), url('${assetURL}/static/fonts/TATSanaSuksa/normal/font.woff') format('woff');
   }
 `
 
