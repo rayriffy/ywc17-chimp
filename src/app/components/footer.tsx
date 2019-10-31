@@ -27,7 +27,7 @@ const AppFooterComponent: React.FC = props => {
           <Box width={[20 / 24, 16 / 24]} py={4}>
             <Flex flexWrap={`wrap`}>
               <Box width={[1, 1 / 4]} p={2}>
-                <Image width={108} src={require('../../../public/static/images/logo.png')} />
+                <Image alt={`logo`} width={108} src={`./static/images/logo.png`} />
               </Box>
               <Box width={[1, 1 / 4]} p={2}>
                 <Text pb={1} fontSize={16} fontWeight={`bold`} fontFamily={`TATSanaSuksa`} color={`#e6332a`}>ข้อมูลลงทะเบียนประชาชน</Text>
