@@ -51,15 +51,15 @@ const AppFooterComponent: React.FC = props => {
       <FooterBox>
         <Flex justifyContent={`center`}>
           <Box width={[20 / 24]}>
-            <Flex>
-              <Box width={1 / 4} p={2}>
+            <Flex flexWrap={`wrap`}>
+              <Box width={[1, 1 / 4]} p={2}>
                 <Text fontSize={14} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`}>Copyright © 2003-2019</Text>
               </Box>
               {payload.navbarItems.map(item => {
                 const {label, href} = item
 
                 return (
-                  <Box width={1 / 4} key={`navbar-${label}`} p={2}>
+                  <Box width={[1, 1 / 4]} key={`navbar-${label}`} p={2}>
                     <NavLink href={href}>
                       <Text fontSize={14} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`}>{label}</Text>
                     </NavLink>
