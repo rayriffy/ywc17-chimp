@@ -2,7 +2,16 @@ import withPlugins from 'next-compose-plugins'
 import optimizedImages from 'next-optimized-images'
 
 const core = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? `/ywc17-chimp` : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ywc17-chimp/' : '',
+  webpack: (config, { dev }) => {
+    config.module.rules = config.module.rules.map(rule => {
+      if(rule.loader === 'babel-loader') {
+        rule.options.cacheDirectory = false
+      }
+      return rule
+    })
+    return config
+  },
 }
 
 const config = withPlugins([
