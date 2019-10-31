@@ -24,7 +24,7 @@ const AppFooterComponent: React.FC = props => {
     <StyledBox>
       <Box>
         <Flex justifyContent={`center`}>
-          <Box width={[20 / 24]} py={4}>
+          <Box width={[20 / 24, 16 / 24]} py={4}>
             <Flex flexWrap={`wrap`}>
               <Box width={[1, 1 / 4]} p={2}>
                 <Image width={108} src={require('../../../public/static/images/logo.png')} />
@@ -50,7 +50,7 @@ const AppFooterComponent: React.FC = props => {
       </Box>
       <FooterBox>
         <Flex justifyContent={`center`}>
-          <Box width={[20 / 24]}>
+          <Box width={[20 / 24, 16 / 24]}>
             <Flex flexWrap={`wrap`}>
               <Box width={[1, 1 / 4]} p={2}>
                 <Text fontSize={14} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`}>Copyright © 2003-2019</Text>
