@@ -4,7 +4,7 @@ import { Box } from 'rebass'
 
 const HomeComponent: React.FC = props => {
   return (
-    <Box>
+    <Box py={5}>
       OK
     </Box>
   )

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const {BACKEND_URL} = process.env
+const BACKEND_URL = process.env.NODE_ENV === 'production' ? '/ywc17-chimp' : ''
 
 const AppGlobalComponent = createGlobalStyle`
   body {
@@ -23,17 +23,17 @@ const AppGlobalComponent = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'TATSanaSuksa';
-    font-style: normal;
+    font-family: 'TATSanaChon';
+    font-style: bold;
     font-display: swap;
-    src: url('${BACKEND_URL}/static/fonts/TATSanaSuksa/normal/font.woff2') format('woff2'), url('${BACKEND_URL}/static/fonts/TATSanaSuksa/normal/font.woff') format('woff');
+    src: url('${BACKEND_URL}/static/fonts/TATSanaChon/bold/font.woff2') format('woff2'), url('${BACKEND_URL}/static/fonts/TATSanaChon/bold/font.woff') format('woff');
   }
 
   @font-face {
     font-family: 'TATSanaSuksa';
-    font-style: bold;
+    font-style: normal;
     font-display: swap;
-    src: url('${BACKEND_URL}/static/fonts/TATSanaSuksa/bold/font.woff2') format('woff2'), url('${BACKEND_URL}/static/fonts/TATSanaSuksa/bold/font.woff') format('woff');
+    src: url('${BACKEND_URL}/static/fonts/TATSanaSuksa/normal/font.woff2') format('woff2'), url('${BACKEND_URL}/static/fonts/TATSanaSuksa/normal/font.woff') format('woff');
   }
 `
 
