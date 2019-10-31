@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { Box, Flex, Link, Text } from 'rebass'
 import styled from 'styled-components'
+
+import { Payload } from '../../app/context'
 
 const Container = styled(Box)`
   position: fixed;
@@ -21,14 +23,22 @@ const NavText = styled(Text)`
 `
 
 const AppNavbarComponent: React.FC = () => {
+  const payload = useContext(Payload)
+
   return (
     <Container>
       <Flex justifyContent={`center`} alignItems={`center`}>
-        <Box p={3}>
-          <NavLink href={`/`}>
-            <NavText fontSize={14} fontWeight={`normal`} fontFamily={`TATSanaChon`}>ริฟฟี่พ่อทุกสถาบัน</NavText>
-          </NavLink>
-        </Box>
+        {payload.navbarItems.map(item => {
+          const {label, href} = item
+
+          return (
+            <Box p={3} key={`navbar-${label}`}>
+              <NavLink href={href}>
+                <NavText fontSize={14} fontWeight={`normal`} fontFamily={`TATSanaChon`}>{label}</NavText>
+              </NavLink>
+            </Box>
+          )
+        })}
       </Flex>
     </Container>
   )
