@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
 
-import { register } from 'next-offline/runtime'
-
 import { Box } from 'rebass'
 
 import Context from '../context'
@@ -14,7 +12,15 @@ const AppComponent: React.FC = props => {
   const {children} = props
 
   useEffect(() => {
-    register()
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/ywc17-chimp/service-worker.js', { scope: '/ywc17-chimp' }).then((registration) => {
+          console.log('SW registered: ', registration)
+        }).catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError)
+        })
+      })
+    }
   }, [])
 
   return (
