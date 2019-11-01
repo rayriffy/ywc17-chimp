@@ -21,11 +21,11 @@ const SEOComponent: React.FC = props => {
       ]}
       meta={[
         {
-          property: 'title',
+          name: 'title',
           content: 'มาตรการส่งเสริมการท่องเที่ยวในประเทศ “ชิมช้อปใช้”',
         },
         {
-          property: 'description',
+          name: 'description',
           content: 'ผู้สนใจเข้าร่วมมาตรการฯ สามารถลงทะเบียน ตั้งแต่ วันที่ 23 ก.ย. - 15 พ.ย. 62',
         },
       ]}
