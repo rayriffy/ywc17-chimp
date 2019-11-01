@@ -8,13 +8,15 @@ import Global from './global'
 import Navbar from './navbar'
 import SEO from './seo'
 
+import { assetURL } from '../../core/services/assetURL'
+
 const AppComponent: React.FC = props => {
   const {children} = props
 
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/ywc17-chimp/service-worker.js', { scope: '/ywc17-chimp' }).then((registration) => {
+        navigator.serviceWorker.register(`${assetURL}/service-worker.js`, { scope: assetURL === '' ? '/' : assetURL }).then((registration) => {
           console.log('SW registered: ', registration)
         }).catch((registrationError) => {
           console.log('SW registration failed: ', registrationError)
