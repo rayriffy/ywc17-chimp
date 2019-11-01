@@ -15,7 +15,7 @@ const SEOComponent: React.FC = props => {
           href: `${assetURL}/static/images/logo.png`,
         },
         {
-          rel: 'apple-touch-icon-precomposed',
+          rel: 'apple-touch-icon',
           href: `${assetURL}/static/images/logo.png`,
         },
         {
