@@ -7,6 +7,7 @@ import Condition from './condition'
 import Contact from './contact'
 import Disclaimer from './disclaimer'
 import Guide from './guide'
+import Sponsor from './sponsor'
 
 const HomeComponent: React.FC = props => {
   return (
@@ -16,6 +17,7 @@ const HomeComponent: React.FC = props => {
       <Guide />
       <Disclaimer />
       <Contact />
+      <Sponsor />
     </Box>
   )
 }
