@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 
-import { Collapse } from 'react-collapse'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 import { Box, Flex, Image, Link, Text } from 'rebass'
@@ -111,7 +110,7 @@ const AppNavbarComponent: React.FC = () => {
                 {isCollapse ? <FaTimes size={`30px`} color={`#333333`} /> : <FaBars size={`30px`} color={`#333333`} />}
               </Box>
             </StyledFlex>
-            <Collapse isOpened={isCollapse}>
+            {isCollapse ?
               <CollapseContainer p={3}>
                 <Flex flexWrap={`wrap`}>
                   {payload.navbarItems.map(item => {
@@ -127,7 +126,7 @@ const AppNavbarComponent: React.FC = () => {
                   })}
                 </Flex>
               </CollapseContainer>
-            </Collapse>
+            : null}
           </HideDesktop>
         </Container>
       </Box>
