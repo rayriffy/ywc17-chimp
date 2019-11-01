@@ -38,13 +38,17 @@ const HomeConditionComponent: React.FC = props => {
         </Box>
         <Box py={2}>
           <Flex justifyContent={`center`}>
-            <Link href={`https://regist.ชิมช้อปใช้.com/Register/`}>
-              <StyledButton px={5}>
-                <Text fontSize={[18, 24]} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`} textAlign={`center`}>ลงทะเบียน เฟส 2</Text>
-                <Text fontSize={[18, 24]} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`} textAlign={`center`}>ตั้งแต่วันที่ 24 ต.ค. 62 วันละ 2 รอบ เวลา 6.00 น. และ 18.00 น.</Text>
-                <Text fontSize={[18, 24]} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`} textAlign={`center`}>(จำกัดจำนวนผู้ลงทะเบียนรอบละ 5 แสนคน รวม 1 ล้านคนต่อวัน)</Text>
-              </StyledButton>
-            </Link>
+            <Box width={22 / 24}>
+              <Flex justifyContent={`center`}>
+                <Link href={`https://regist.ชิมช้อปใช้.com/Register/`}>
+                  <StyledButton px={5}>
+                    <Text fontSize={[18, 24]} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`} textAlign={`center`}>ลงทะเบียน เฟส 2</Text>
+                    <Text fontSize={[18, 24]} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`} textAlign={`center`}>ตั้งแต่วันที่ 24 ต.ค. 62 วันละ 2 รอบ เวลา 6.00 น. และ 18.00 น.</Text>
+                    <Text fontSize={[18, 24]} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`} textAlign={`center`}>(จำกัดจำนวนผู้ลงทะเบียนรอบละ 5 แสนคน รวม 1 ล้านคนต่อวัน)</Text>
+                  </StyledButton>
+                </Link>
+              </Flex>
+            </Box>
           </Flex>
         </Box>
         <Box pt={5} pb={2}>

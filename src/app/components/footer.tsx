@@ -58,9 +58,9 @@ const AppFooterComponent: React.FC = props => {
       <FooterBox>
         <Flex justifyContent={`center`}>
           <Box width={[22 / 24, 20 / 24, 18 / 24]}>
-            <Flex flexWrap={`wrap`}>
+            <Flex flexWrap={`wrap`} py={3}>
               <Box width={[1, 1 / 4]} p={2}>
-                <Text fontSize={14} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`}>Copyright © 2003-2019</Text>
+                <Text fontSize={[12, 14]} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`}>Copyright © 2003-2019</Text>
               </Box>
               {payload.navbarItems.map(item => {
                 const {label, href} = item
@@ -68,7 +68,7 @@ const AppFooterComponent: React.FC = props => {
                 return (
                   <Box width={[1, 1 / 4]} key={`navbar-${label}`} p={2}>
                     <NavLink href={href}>
-                      <Text fontSize={14} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`}>{label}</Text>
+                      <Text fontSize={[12, 14]} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`white`}>{label}</Text>
                     </NavLink>
                   </Box>
                 )
