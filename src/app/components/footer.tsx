@@ -19,6 +19,11 @@ const NavLink = styled(Link)`
   text-decoration: none;
 `
 
+const StyledA = styled.a`
+  text-decoration: none;
+  color: #333333;
+`
+
 const AppFooterComponent: React.FC = props => {
   const payload = useContext(Payload)
 
@@ -34,17 +39,17 @@ const AppFooterComponent: React.FC = props => {
               <Box width={[1, 1 / 4]} p={2}>
                 <Text pb={1} fontSize={16} fontWeight={700} fontFamily={`TATSanaSuksa`} color={`#e6332a`}>ข้อมูลลงทะเบียนประชาชน</Text>
                 <Text pb={1} fontSize={14} fontFamily={`TATSanaSuksa`} color={`#333333`}>การรับสิทธิ การใช้งานแอปพลิเคชั่น “เป๋าตัง” และ “ถุงเงิน”</Text>
-                <Text pb={1} fontSize={14} fontFamily={`TATSanaSuksa`} color={`#333333`}>ติดต่อ ชิมช้อปใช้ Call Center by Krungthai โทร.0 2111 1144</Text>
+                <Text pb={1} fontSize={14} fontFamily={`TATSanaSuksa`} color={`#333333`}>ติดต่อ ชิมช้อปใช้ Call Center by Krungthai โทร.<StyledA href={`tel:021111144`}>0 2111 1144</StyledA></Text>
               </Box>
               <Box width={[1, 1 / 4]} p={2}>
                 <Text pb={1} fontSize={16} fontWeight={700} fontFamily={`TATSanaSuksa`} color={`#e6332a`}>ข้อมูลลงทะเบียนผู้ประกอบการ</Text>
                 <Text pb={1} fontSize={14} fontFamily={`TATSanaSuksa`} color={`#333333`}>เงื่อนไขและวิธีการเข้าร่วมมาตรการฯ</Text>
-                <Text pb={1} fontSize={14} fontFamily={`TATSanaSuksa`} color={`#333333`}>ติดต่อ โทร. 0 2270 6400 กด 7</Text>
+                <Text pb={1} fontSize={14} fontFamily={`TATSanaSuksa`} color={`#333333`}>ติดต่อ โทร. <StyledA href={`tel:022706400`}>0 2270 6400 กด 7</StyledA></Text>
               </Box>
               <Box width={[1, 1 / 4]} p={2}>
                 <Text pb={1} fontSize={16} fontWeight={700} fontFamily={`TATSanaSuksa`} color={`#e6332a`}>ข้อมูลเที่ยวชิมช้อปใช้</Text>
                 <Text pb={1} fontSize={14} fontFamily={`TATSanaSuksa`} color={`#333333`}>ติดต่อ ททท.</Text>
-                <Text pb={1} fontSize={14} fontFamily={`TATSanaSuksa`} color={`#333333`}>โทร 1672</Text>
+                <Text pb={1} fontSize={14} fontFamily={`TATSanaSuksa`} color={`#333333`}>โทร <StyledA href={`tel:1672`}>1672</StyledA></Text>
               </Box>
             </Flex>
           </Box>
