@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Card, Flex, Heading, Image, Text } from 'rebass'
+import { Box, Card, Flex, Image } from 'rebass'
 import styled from 'styled-components'
 
 import { assetURL } from '../../../core/services/assetURL'
