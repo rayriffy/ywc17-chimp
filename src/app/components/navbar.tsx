@@ -11,6 +11,7 @@ const Container = styled(Box)`
   background: #fff;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
+  height: 58px;
 `
 
 const NavLink = styled(Link)`
@@ -52,21 +53,23 @@ const AppNavbarComponent: React.FC = () => {
   const payload = useContext(Payload)
 
   return (
-    <Container>
-      <Flex justifyContent={`center`} alignItems={`center`}>
-        {payload.navbarItems.map(item => {
-          const {label, href} = item
+    <Box pb={58}>
+      <Container>
+        <Flex justifyContent={`center`} alignItems={`center`}>
+          {payload.navbarItems.map(item => {
+            const {label, href} = item
 
-          return (
-            <Box p={3} key={`navbar-${label}`}>
-              <NavLink href={href}>
-                <NavText fontSize={14} fontWeight={`normal`} fontFamily={`TATSanaChon`}>{label}</NavText>
-              </NavLink>
-            </Box>
-          )
-        })}
-      </Flex>
-    </Container>
+            return (
+              <Box p={3} key={`navbar-${label}`}>
+                <NavLink href={href}>
+                  <NavText fontSize={14} fontWeight={400} fontFamily={`TATSanaChon`}>{label}</NavText>
+                </NavLink>
+              </Box>
+            )
+          })}
+        </Flex>
+      </Container>
+    </Box>
   )
 }
 

@@ -18,13 +18,15 @@ const AppGlobalComponent = createGlobalStyle`
   @font-face {
     font-family: 'TATSanaChon';
     font-style: normal;
+    font-weight: 400;
     font-display: swap;
     src: url('${assetURL}/static/fonts/TATSanaChon/normal/font.woff2') format('woff2'), url('${assetURL}/static/fonts/TATSanaChon/normal/font.woff') format('woff');
   }
 
   @font-face {
     font-family: 'TATSanaChon';
-    font-style: bold;
+    font-style: normal;
+    font-weight: 700;
     font-display: swap;
     src: url('${assetURL}/static/fonts/TATSanaChon/bold/font.woff2') format('woff2'), url('${assetURL}/static/fonts/TATSanaChon/bold/font.woff') format('woff');
   }
