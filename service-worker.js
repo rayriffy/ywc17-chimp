@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "url": "/ywc17-chimp/_next/static/CyqBzyC6rWmO32QKmYidC/pages/_app.js",
-    "revision": "4ecc42d2c23cade844dd"
+    "url": "/ywc17-chimp/_next/static/_AVAan5bi0ygQ7qdJEQSV/pages/_app.js",
+    "revision": "4cb667499ec4df23edfb"
   },
   {
-    "url": "/ywc17-chimp/_next/static/CyqBzyC6rWmO32QKmYidC/pages/_error.js",
-    "revision": "1210bbea40b65726cbfa"
+    "url": "/ywc17-chimp/_next/static/_AVAan5bi0ygQ7qdJEQSV/pages/_error.js",
+    "revision": "e274947e136fc0d89342"
   },
   {
-    "url": "/ywc17-chimp/_next/static/CyqBzyC6rWmO32QKmYidC/pages/index.js",
-    "revision": "59337e7b2e3ff472cfd8"
+    "url": "/ywc17-chimp/_next/static/_AVAan5bi0ygQ7qdJEQSV/pages/index.js",
+    "revision": "32af3b0df7c2ba83a834"
   },
   {
     "url": "/ywc17-chimp/_next/static/chunks/commons.0aba2d40f94867824fdd.js",
