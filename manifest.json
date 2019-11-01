@@ -5,8 +5,7 @@
   "background_color": "#2196f3",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/ywc17-chimp",
-  "start_url": "/",
+  "start_url": "/ywc17-chimp",
   "icons": [
     {
       "src": "static/images/logo.png",
