@@ -1,0 +1,17 @@
+{
+  "name": "ชิมช้อปใช้",
+  "short_name": "ชิมช้อปใช้",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/ywc17-chimp",
+  "icons": [
+    {
+      "src": "static/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
