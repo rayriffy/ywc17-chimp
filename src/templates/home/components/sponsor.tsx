@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { assetURL } from '../../../core/services/assetURL'
 
 const StyledImage = styled(Image)`
+  height: auto;
   transition: transform 1s;
 
   &:hover {

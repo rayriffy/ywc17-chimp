@@ -28,6 +28,11 @@ const StyledButton = styled(Button)`
   }
 `
 
+const StyledYouTube = styled(YouTube)`
+  width: 100%;
+  height: auto;
+`
+
 const GuideButton: React.FC<IGuideButtonProps> = props => {
   const {href, title} = props
   return (
@@ -61,7 +66,7 @@ const HomeGuideComponent: React.FC = props => {
         <Box py={3}>
           <Flex flexWrap={`wrap`}>
             <Box width={[1, 7 / 12]} p={3}>
-              <YouTube videoId={`ZkniwQLv_Xk`} />
+              <StyledYouTube videoId={`ZkniwQLv_Xk`} />
             </Box>
             <Box width={[1, 5 / 12]} p={3}>
               <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`} pb={3}>ขั้นตอนการเข้าใช้งานผ่านแอปฯ “เป๋าตัง”</Text>
