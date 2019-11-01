@@ -11,11 +11,15 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
+    "react-icons": "^3.8.0",
+    "react-youtube": "^7.9.0",
     "rebass": "^4.0.7",
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.3",
+    "@types/react-icons": "^3.0.0",
+    "@types/react-youtube": "^7.6.2",
     "@types/rebass": "^4.0.3",
     "@types/styled-components": "^4.1.20",
     "prettier": "^1.18.2",

@@ -4,14 +4,14 @@ import { Box } from 'rebass'
 
 import Banner from './banner'
 import Condition from './condition'
+import Guide from './guide'
 
 const HomeComponent: React.FC = props => {
   return (
     <Box>
-      <Box>
-        <Banner />
-        <Condition />
-      </Box>
+      <Banner />
+      <Condition />
+      <Guide />
     </Box>
   )
 }
