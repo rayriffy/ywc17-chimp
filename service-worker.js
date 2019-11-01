@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "url": "/ywc17-chimp/_next/static/_AVAan5bi0ygQ7qdJEQSV/pages/_app.js",
-    "revision": "4cb667499ec4df23edfb"
+    "url": "/ywc17-chimp/_next/static/bPYU2DqorgE3sNn5qS-qU/pages/_app.js",
+    "revision": "6b220a82e139e5d6a65a"
   },
   {
-    "url": "/ywc17-chimp/_next/static/_AVAan5bi0ygQ7qdJEQSV/pages/_error.js",
-    "revision": "e274947e136fc0d89342"
+    "url": "/ywc17-chimp/_next/static/bPYU2DqorgE3sNn5qS-qU/pages/_error.js",
+    "revision": "c343d4f3e61ab80b987e"
   },
   {
-    "url": "/ywc17-chimp/_next/static/_AVAan5bi0ygQ7qdJEQSV/pages/index.js",
-    "revision": "32af3b0df7c2ba83a834"
+    "url": "/ywc17-chimp/_next/static/bPYU2DqorgE3sNn5qS-qU/pages/index.js",
+    "revision": "77ef812864d464222393"
   },
   {
     "url": "/ywc17-chimp/_next/static/chunks/commons.0aba2d40f94867824fdd.js",
     "revision": "6bac114fbf6face105b8"
   },
   {
-    "url": "/ywc17-chimp/_next/static/runtime/main-67462a6e743530ba969c.js",
-    "revision": "0c6c48c460b74a0f9c95"
+    "url": "/ywc17-chimp/_next/static/runtime/main-1f38c70f99c503dd9917.js",
+    "revision": "25eb7a0a71afdea7a878"
   },
   {
     "url": "/ywc17-chimp/_next/static/runtime/webpack-035ac2b14bde147cb4a8.js",
