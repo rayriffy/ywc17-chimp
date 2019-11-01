@@ -32,6 +32,10 @@ const SEOComponent: React.FC = props => {
           name: 'description',
           content: 'ผู้สนใจเข้าร่วมมาตรการฯ สามารถลงทะเบียน ตั้งแต่ วันที่ 23 ก.ย. - 15 พ.ย. 62',
         },
+        {
+          name: 'theme-color',
+          content: '#213a8f',
+        },
       ]}
     />
   )
