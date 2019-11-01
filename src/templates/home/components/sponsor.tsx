@@ -50,7 +50,7 @@ const HomeSponsorComponent: React.FC = props => {
 
             return (
               <Box width={[1 / 3, 1 / 6]} p={4} key={`sponsor-${code}`}>
-                <Link href={href}>
+                <Link aria-label={`sponsor-${code}`} href={href}>
                   <Flex justifyContent={`center`}>
                     <Box>
                       <StyledImage alt={code} width={102} src={`${assetURL}/static/images/logos/${code}.png`} />

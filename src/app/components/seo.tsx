@@ -19,6 +19,16 @@ const SEOComponent: React.FC = props => {
           href: `${assetURL}/static/images/logo.png`,
         },
       ]}
+      meta={[
+        {
+          property: 'title',
+          content: 'มาตรการส่งเสริมการท่องเที่ยวในประเทศ “ชิมช้อปใช้”',
+        },
+        {
+          property: 'description',
+          content: 'ผู้สนใจเข้าร่วมมาตรการฯ สามารถลงทะเบียน ตั้งแต่ วันที่ 23 ก.ย. - 15 พ.ย. 62',
+        },
+      ]}
     />
   )
 }

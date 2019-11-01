@@ -82,7 +82,7 @@ const AppNavbarComponent: React.FC = () => {
   const [isCollapse, setIsCollapse] = useState<boolean>(false)
 
   return (
-    <Box>
+    <nav>
       <Box pb={58}>
         <Container>
           <HideMobile>
@@ -130,7 +130,7 @@ const AppNavbarComponent: React.FC = () => {
           </HideDesktop>
         </Container>
       </Box>
-    </Box>
+    </nav>
   )
 }
 

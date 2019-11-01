@@ -29,7 +29,7 @@ const HomeContactComponent: React.FC = props => {
             return (
               <Box width={[1, 1 / 3]} p={4} key={`contact-${code}`}>
                 <Flex justifyContent={`center`} alignItems={`center`}>
-                  <Link href={href}>
+                  <Link aria-label={`contact-${code}`} href={href}>
                     <Image alt={code} src={`${assetURL}/static/images/contact/${code}.png`} />
                   </Link>
                 </Flex>

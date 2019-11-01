@@ -11,14 +11,14 @@ import Sponsor from './sponsor'
 
 const HomeComponent: React.FC = props => {
   return (
-    <Box>
+    <main>
       <Banner />
       <Condition />
       <Guide />
       <Disclaimer />
       <Contact />
       <Sponsor />
-    </Box>
+    </main>
   )
 }
 
