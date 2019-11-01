@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { FaCaretRight } from 'react-icons/fa'
-import YouTube from 'react-youtube'
+import Player from 'react-player'
 
 import { Box, Button, Flex, Image, Link,  Text } from 'rebass'
 import styled from 'styled-components'
@@ -28,9 +28,31 @@ const StyledButton = styled(Button)`
   }
 `
 
-const StyledYouTube = styled(YouTube)`
-  width: 100%;
-  height: auto;
+const VideoWrapper = styled(Box)`
+  position: relative;
+  padding-top: 56.25%;
+`
+
+const Video = styled(Player)`
+  position: absolute;
+  top: 0;
+  left: 0;
+`
+
+const HideDesktop = styled(Box)`
+  display: initial;
+
+  @media screen and (min-width: 40em) {
+    display: none;
+  }
+`
+
+const HideMobile = styled(Box)`
+  display: none;
+
+  @media screen and (min-width: 40em) {
+    display: initial;
+  }
 `
 
 const GuideButton: React.FC<IGuideButtonProps> = props => {
@@ -54,19 +76,25 @@ const HomeGuideComponent: React.FC = props => {
       <Box width={[22 / 24, 20 / 24, 18 / 24]} py={3}>
         <Box py={3}>
           <Flex flexWrap={`wrap`}>
-            <Box width={[1, 5 / 12]} p={3}>
+            <HideMobile width={[1, 5 / 12]} p={3}>
               <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`} pb={3}>ค้นหารายชื่อร้านค้า</Text>
               <GuideButton title={`รายชื่อร้านค้าที่ร่วมโครงการ`} href={`https://www2.xn--b3caa1e2a7e2b0h2be.com/thung-ngern-shop-province`} />
-            </Box>
+            </HideMobile>
             <Box width={[1, 7 / 12]} p={3}>
               <StyledImage src={`${assetURL}/static/images/guide/store.png`} />
             </Box>
+            <HideDesktop width={[1, 5 / 12]} p={3}>
+              <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`} pb={3}>ค้นหารายชื่อร้านค้า</Text>
+              <GuideButton title={`รายชื่อร้านค้าที่ร่วมโครงการ`} href={`https://www2.xn--b3caa1e2a7e2b0h2be.com/thung-ngern-shop-province`} />
+            </HideDesktop>
           </Flex>
         </Box>
         <Box py={3}>
           <Flex flexWrap={`wrap`}>
             <Box width={[1, 7 / 12]} p={3}>
-              <StyledYouTube videoId={`ZkniwQLv_Xk`} />
+              <VideoWrapper>
+                <Video url={`https://www.youtube.com/embed/ZkniwQLv_Xk`} width={`100%`} height={`100%`} />
+              </VideoWrapper>
             </Box>
             <Box width={[1, 5 / 12]} p={3}>
               <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`} pb={3}>ขั้นตอนการเข้าใช้งานผ่านแอปฯ “เป๋าตัง”</Text>
@@ -76,13 +104,17 @@ const HomeGuideComponent: React.FC = props => {
         </Box>
         <Box py={3}>
           <Flex flexWrap={`wrap`}>
-            <Box width={[1, 5 / 12]} p={3}>
+            <HideMobile width={[1, 5 / 12]} p={3}>
               <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`} pb={3}>การเติมเงินเข้า “เป๋าตัง” (G-Wallet)</Text>
               <GuideButton title={`ดูขั้นตอนทั้งหมด`} href={`https://www2.xn--b3caa1e2a7e2b0h2be.com/howto-topup-gwallet`} />
-            </Box>
+            </HideMobile>
             <Box width={[1, 7 / 12]} p={3}>
               <StyledImage src={`${assetURL}/static/images/guide/topup.png`} />
             </Box>
+            <HideDesktop width={[1, 5 / 12]} p={3}>
+              <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`} pb={3}>การเติมเงินเข้า “เป๋าตัง” (G-Wallet)</Text>
+              <GuideButton title={`ดูขั้นตอนทั้งหมด`} href={`https://www2.xn--b3caa1e2a7e2b0h2be.com/howto-topup-gwallet`} />
+            </HideDesktop>
           </Flex>
         </Box>
         <Box py={3}>

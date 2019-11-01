@@ -27,7 +27,7 @@ const HomeContactComponent: React.FC = props => {
           {contacts.map(contact => {
             const {code, href} = contact
             return (
-              <Box width={[1, 1 / 3]} p={4}>
+              <Box width={[1, 1 / 3]} p={4} key={`contact-${code}`}>
                 <Flex justifyContent={`center`} alignItems={`center`}>
                   <Link href={href}>
                     <Image src={`${assetURL}/static/images/contact/${code}.png`} />
