@@ -6,8 +6,6 @@ import styled from 'styled-components'
 import { assetURL } from '../../../core/services/assetURL'
 
 const StyledImage = styled(Image)`
-  width: 102px;
-  height: auto;
   transition: transform 1s;
 
   &:hover {
@@ -54,7 +52,9 @@ const HomeSponsorComponent: React.FC = props => {
               <Box width={[1 / 3, 1 / 6]} p={4} key={`sponsor-${code}`}>
                 <Link href={href}>
                   <Flex justifyContent={`center`}>
-                    <StyledImage src={`${assetURL}/static/images/logos/${code}.png`} />
+                    <Box>
+                      <StyledImage width={102} src={`${assetURL}/static/images/logos/${code}.png`} />
+                    </Box>
                   </Flex>
                 </Link>
               </Box>
