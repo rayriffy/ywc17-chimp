@@ -6,6 +6,9 @@ import Player from 'react-player'
 import { Box, Button, Flex, Image, Link,  Text } from 'rebass'
 import styled from 'styled-components'
 
+import HideDesktop from '../../../core/components/hide-desktop'
+import HideMobile from '../../../core/components/hide-mobile'
+
 import { assetURL } from '../../../core/services/assetURL'
 
 import { IGuideButtonProps } from '../@types/IGuideButtonProps'
@@ -37,22 +40,6 @@ const Video = styled(Player)`
   position: absolute;
   top: 0;
   left: 0;
-`
-
-const HideDesktop = styled(Box)`
-  display: initial;
-
-  @media screen and (min-width: 40em) {
-    display: none;
-  }
-`
-
-const HideMobile = styled(Box)`
-  display: none;
-
-  @media screen and (min-width: 40em) {
-    display: initial;
-  }
 `
 
 const GuideButton: React.FC<IGuideButtonProps> = props => {
