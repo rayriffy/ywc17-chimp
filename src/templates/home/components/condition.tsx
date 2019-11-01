@@ -11,6 +11,17 @@ const StyledButton = styled(Button)`
   box-shadow: 0 15px 30px 0 rgba(28, 78, 132, 0.4);
 `
 
+const Raw = styled.div`
+  font-family: TATSanaSuksa;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333333;
+
+  .nowrap {
+    white-space: nowrap;
+  }
+`
+
 const HomeConditionComponent: React.FC = props => {
   const payload = useContext(Payload)
 
@@ -37,13 +48,13 @@ const HomeConditionComponent: React.FC = props => {
               <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`}>ในประเทศ “ชิมช้อปใช้”</Text>
             </Box>
             <Box>
-              <div dangerouslySetInnerHTML={{__html: payload.detail}} />
+              <Raw dangerouslySetInnerHTML={{__html: payload.detail}} />
             </Box>
             <Box pt={2}>
               <Text fontSize={18} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#333333`}>เงื่อนไขการเข้าร่วมมาตรการ</Text>
             </Box>
             <Box>
-              <div dangerouslySetInnerHTML={{__html: payload.condition}} />
+              <Raw dangerouslySetInnerHTML={{__html: payload.condition}} />
             </Box>
           </Box>
         </Box>
