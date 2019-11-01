@@ -119,7 +119,7 @@ const AppNavbarComponent: React.FC = () => {
                     return (
                       <Box width={1} p={2} key={`navbar-${label}`}>
                         <NavLink href={href}>
-                          <CollapseText fontSize={14} fontWeight={400} fontFamily={`TATSanaChon`} textAlign={`right`}>{label}</CollapseText>
+                          <CollapseText fontSize={16} fontWeight={400} fontFamily={`TATSanaSuksa`} textAlign={`right`}>{label}</CollapseText>
                         </NavLink>
                       </Box>
                     )
