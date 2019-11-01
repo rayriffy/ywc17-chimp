@@ -78,7 +78,7 @@ const BannerComponent: React.FC  = props => {
         <StyledFlex justifyContent={`center`} alignItems={`center`}>
           <Box width={[1 / 3, 1 / 4, 1 / 5]} p={[1, 4]}>
             <Flex justifyContent={`center`}>
-              <LogoImage src={`${assetURL}/static/images/banner/logo.png`} />
+              <LogoImage alt={`logo`} src={`${assetURL}/static/images/banner/logo.png`} />
             </Flex>
           </Box>
         </StyledFlex>

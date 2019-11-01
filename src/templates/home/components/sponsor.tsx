@@ -53,7 +53,7 @@ const HomeSponsorComponent: React.FC = props => {
                 <Link href={href}>
                   <Flex justifyContent={`center`}>
                     <Box>
-                      <StyledImage width={102} src={`${assetURL}/static/images/logos/${code}.png`} />
+                      <StyledImage alt={code} width={102} src={`${assetURL}/static/images/logos/${code}.png`} />
                     </Box>
                   </Flex>
                 </Link>

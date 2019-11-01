@@ -68,7 +68,7 @@ const HomeGuideComponent: React.FC = props => {
               <GuideButton title={`รายชื่อร้านค้าที่ร่วมโครงการ`} href={`https://www2.xn--b3caa1e2a7e2b0h2be.com/thung-ngern-shop-province`} />
             </HideMobile>
             <Box width={[1, 7 / 12]} p={3}>
-              <StyledImage src={`${assetURL}/static/images/guide/store.png`} />
+              <StyledImage alt={`store`} src={`${assetURL}/static/images/guide/store.png`} />
             </Box>
             <HideDesktop width={[1, 5 / 12]} p={3}>
               <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`} pb={3}>ค้นหารายชื่อร้านค้า</Text>
@@ -96,7 +96,7 @@ const HomeGuideComponent: React.FC = props => {
               <GuideButton title={`ดูขั้นตอนทั้งหมด`} href={`https://www2.xn--b3caa1e2a7e2b0h2be.com/howto-topup-gwallet`} />
             </HideMobile>
             <Box width={[1, 7 / 12]} p={3}>
-              <StyledImage src={`${assetURL}/static/images/guide/topup.png`} />
+              <StyledImage alt={`topup`} src={`${assetURL}/static/images/guide/topup.png`} />
             </Box>
             <HideDesktop width={[1, 5 / 12]} p={3}>
               <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`} pb={3}>การเติมเงินเข้า “เป๋าตัง” (G-Wallet)</Text>
@@ -107,7 +107,7 @@ const HomeGuideComponent: React.FC = props => {
         <Box py={3}>
           <Flex flexWrap={`wrap`}>
             <Box width={[1, 7 / 12]} p={3}>
-              <StyledImage src={`${assetURL}/static/images/guide/usage.png`} />
+              <StyledImage alt={`usage`} src={`${assetURL}/static/images/guide/usage.png`} />
             </Box>
             <Box width={[1, 5 / 12]} p={3}>
               <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`}>ใช้จ่าย สะดวก ปลอดภัยผ่าน “เป๋าตัง” (G-Wallet)</Text>
@@ -126,12 +126,12 @@ const HomeGuideComponent: React.FC = props => {
                 <Flex>
                   <Box p={2}>
                     <Link href={`https://apps.apple.com/th/app/%E0%B9%80%E0%B8%9B-%E0%B8%B2%E0%B8%95-%E0%B8%87/id1324902182?l=th`}>
-                      <Image width={168} src={`${assetURL}/static/images/download/ios.png`} />
+                      <Image alt={`ios`} width={168} src={`${assetURL}/static/images/download/ios.png`} />
                     </Link>
                   </Box>
                   <Box p={2}>
                     <Link href={`https://play.google.com/store/apps/details?id=com.ktb.customer.qr`}>
-                      <Image width={168} src={`${assetURL}/static/images/download/android.png`} />
+                      <Image alt={`android`} width={168} src={`${assetURL}/static/images/download/android.png`} />
                     </Link>
                   </Box>
                 </Flex>

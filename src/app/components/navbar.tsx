@@ -103,7 +103,7 @@ const AppNavbarComponent: React.FC = () => {
           <HideDesktop>
             <StyledFlex alignItems={`center`}>
               <Box px={3}>
-                <StyledImage src={`${assetURL}/static/images/logo.png`} />
+                <StyledImage alt={`logo`} src={`${assetURL}/static/images/logo.png`} />
               </Box>
               <Box mx={`auto`} />
               <Box px={3} onClick={() => setIsCollapse(prev => !prev)}>
