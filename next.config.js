@@ -1,5 +1,10 @@
+const withOffline = require('next-offline')
+
 const config = {
   assetPrefix: process.env.NODE_ENV === 'production' ? '/ywc17-chimp' : '',
+  workboxOpts: {
+    scope: '/ywc17-chimp'
+  },
 }
 
-module.exports = config
+module.exports = withOffline(config)
