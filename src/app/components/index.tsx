@@ -16,7 +16,7 @@ const AppComponent: React.FC = props => {
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register(`${assetURL}/service-worker.js`, { scope: assetURL === '' ? '/' : assetURL }).then((registration) => {
+        navigator.serviceWorker.register(`${assetURL}/service-worker.js`, { scope: '/' }).then((registration) => {
           console.log('SW registered: ', registration)
         }).catch((registrationError) => {
           console.log('SW registration failed: ', registrationError)
