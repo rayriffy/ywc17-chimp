@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import { register } from 'next-offline/runtime'
 
 import { Box } from 'rebass'
 
@@ -10,6 +12,10 @@ import SEO from './seo'
 
 const AppComponent: React.FC = props => {
   const {children} = props
+
+  useEffect(() => {
+    register()
+  }, [])
 
   return (
     <Box>
