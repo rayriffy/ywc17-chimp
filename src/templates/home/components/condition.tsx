@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 
+import sanitizeHtml from 'sanitize-html'
+
 import { Box, Button, Flex, Link, Text } from 'rebass'
 import styled from 'styled-components'
 
@@ -30,6 +32,12 @@ const Raw = styled.div`
 const HomeConditionComponent: React.FC = props => {
   const payload = useContext(Payload)
 
+  const cleanup = (html: string) => {
+    return {
+      __html: sanitizeHtml(html),
+    }
+  }
+
   return (
       <Box py={3}>
         <Box py={2}>
@@ -59,13 +67,13 @@ const HomeConditionComponent: React.FC = props => {
                 <Text fontSize={36} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#e6332a`}>ในประเทศ “ชิมช้อปใช้”</Text>
               </Box>  
               <Box py={2}>
-                <Raw dangerouslySetInnerHTML={{__html: payload.detail}} />
+                <Raw dangerouslySetInnerHTML={cleanup(payload.detail)} />
               </Box>
               <Box pt={2}>
                 <Text fontSize={18} fontWeight={`bold`} fontFamily={`TATSanaChon`} color={`#333333`}>เงื่อนไขการเข้าร่วมมาตรการ</Text>
               </Box>
               <Box py={3}>
-                <Raw dangerouslySetInnerHTML={{__html: payload.condition}} />
+                <Raw dangerouslySetInnerHTML={cleanup(payload.condition)} />
               </Box>
             </Box>
           </Flex>
